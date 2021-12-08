@@ -1,0 +1,73 @@
+$box-shadow: 0 9px 19px rgba(0,0,0,0.30), 0 5px 5px rgba(0,0,0,0.34);
+$box-shadow2: 0 9px 19px rgba(0,0,0,0.19), 0 5px 5px rgba(0,0,0,0.23);
+$blue: rgba(1, 50, 67, 1);
+$green: rgba(15, 200, 75, 1);
+
+body {
+  font-family: 'Roboto Slab', serif;
+  background-color: rgba(162, 222, 208, 0.7);
+  font-size: 22px;
+}
+
+#equation {
+  word-break: break-word;
+  width: 300px;
+  border: 8px $blue solid;
+  border-radius: 5px;
+  box-shadow: $box-shadow2;
+  font-size: 18px;
+}
+
+#equation:empty:before {
+  content: "\00a0";
+}
+
+.monitor {
+  background: lighten($blue, 10%);
+  color: white;
+}
+
+#display {
+  @extend #equation;
+  font-size: 26px;
+}
+
+button {
+  border: 1px black solid;
+}
+
+.operator {
+  background: lighten($blue, 50%);
+}
+
+.equal {
+  color: white;
+  background: lighten($blue, 25%);
+}
+
+#container {
+  width: 300px;
+}
+
+#subContainer {
+  height: 300px;
+  border: 8px $blue solid;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+}
+
+.number {
+  background: lighten($blue, 70%);
+}
+
+.buttonPressLight {
+  background: lighten($green, 40%);
+}
+
+.buttonPressMedium {
+  background: lighten($green, 25%);
+}
+
+.buttonPressDark {
+  background: lighten($green, 10%);
+}
